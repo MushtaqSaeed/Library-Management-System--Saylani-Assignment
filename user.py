@@ -59,6 +59,8 @@ class User:
 
         input("\nPress Enter To Go Back To User Panel")
 
+    
+    
     def return_book(self, user_id):
         print("\n\t\t\t>>> RETURN BOOK <<<\n")
         title = input("Enter Title Of Book: ")
@@ -71,6 +73,11 @@ class User:
         with open("./user.json", "r") as files:
             users = json.load(files)
 
+        def update_book_copies(title, author, copies):
+            for book in books:
+                if book["title"] == title and book["author"] == author:
+                    book["available_copies"] = book["available_copies"] + copies
+                    break
         
         user_found = False
         for user in users:
@@ -82,13 +89,13 @@ class User:
                         book_found = True
                         if book_list[2] > copies_to_return:
                             book_list[2] -= copies_to_return
-                            self._update_book_copies(title, author, copies_to_return)
+                            update_book_copies(title, author, copies_to_return)
                             user["borrowed_book"] -= copies_to_return
                             print("\nSuccessfully Returned !!!")
                             time.sleep(2)
                         elif book_list[2] == copies_to_return:
                             user["b_book_name"].remove(book_list)
-                            self._update_book_copies(title, author, copies_to_return)
+                            update_book_copies(title, author, copies_to_return)
                             user["borrowed_book"] -= copies_to_return
                             print("\nSuccessfully Returned !!!")
                             time.sleep(2)
@@ -112,17 +119,6 @@ class User:
             json.dump(books, file, indent=4)
 
 
-    def _update_book_copies(self, title, author, copies):
-        print("call")
-        with open("./data.json", "r") as file:
-            books = json.load(file)
-        for book in books:
-            if book["title"] == title and book["author"] == author:
-                book["available_copies"] += copies
-                print(f"updated!!! {copies} + {book["available_copies"]}")
-                break
-        with open("./data.json", "w") as file:
-            json.dump(books, file, indent=4)
 
 
     def borrowed_book(self, user_id):
