@@ -4,7 +4,7 @@
         "title": "Introduction to Python",
         "author": "Guido van Rossum",
         "no_of_copies": 10,
-        "available_copies": 7
+        "available_copies": 6
     },
     {
         "id": 62852,
@@ -53,7 +53,7 @@
         "title": "Machine Learning",
         "author": "Tom M. Mitchell",
         "no_of_copies": 4,
-        "available_copies": 3
+        "available_copies": 2
     },
     {
         "id": 62859,

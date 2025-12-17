@@ -3,7 +3,7 @@
         "user_id": 72591,
         "name": "Mushtaq",
         "cnic": "1234567891111",
-        "borrowed_book": 9,
+        "borrowed_book": 10,
         "b_book_name": [
             [
                 "Java Programming Basics",
@@ -36,6 +36,11 @@
                 1
             ],
             [
+                "Machine Learning",
+                "Tom M. Mitchell",
+                1
+            ],
+            [
                 "Software Engineering",
                 "Ian Sommerville",
                 1
@@ -51,6 +56,20 @@
                 1
             ]
         ]
+    },
+    {
+        "user_id": 72592,
+        "name": "Saad",
+        "cnic": "1357986420111",
+        "borrowed_book": 0,
+        "b_book_name": []
+    },
+    {
+        "user_id": 72593,
+        "name": "Hamza",
+        "cnic": "1111111111111",
+        "borrowed_book": 0,
+        "b_book_name": []
     },
     {
         "user_id": 72594,
@@ -106,6 +125,19 @@
             [
                 "Clean Code",
                 "Robert C. Martin",
+                1
+            ]
+        ]
+    },
+    {
+        "user_id": 72595,
+        "name": "Mushtaq",
+        "cnic": "1234567890123",
+        "borrowed_book": 1,
+        "b_book_name": [
+            [
+                "Introduction to Python",
+                "Guido van Rossum",
                 1
             ]
         ]
